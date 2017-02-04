@@ -8,12 +8,14 @@
     "test:saucelabs": "nightwatch -c nightwatch.json --env saucelabs",
     "selenium:download": "curl http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar > selenium-server-standalone.jar"
   },
-  "author": "",
+  "author": "cesine",
   "license": "ISC",
   "devDependencies": {
     "nightwatch": "^0.9.12"
   },
   "dependencies": {
-    "config": "^1.25.1"
+    "config": "^1.25.1",
+    "nightwatch-component-a": "git://github.com/cesine/nightwatch-component-a",
+    "nightwatch-component-b": "git://github.com/cesine/nightwatch-component-b"
   }
 }

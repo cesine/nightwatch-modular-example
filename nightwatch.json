@@ -1,5 +1,9 @@
 {
-  "src_folders" : ["./test"],
+  "src_folders" : [
+    "./test",
+    "./node_modules/nightwatch-component-a/test",
+    "./node_modules/nightwatch-component-b/test"
+  ],
   "test_workers" : false,
   "output_folder"  : "reports",
 
