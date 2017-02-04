@@ -4,7 +4,7 @@
     "./node_modules/nightwatch-component-a/test",
     "./node_modules/nightwatch-component-b/test"
   ],
-  "test_workers" : false,
+  "test_workers" : true,
   "output_folder"  : "reports",
 
   "selenium" : {

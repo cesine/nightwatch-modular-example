@@ -11,7 +11,7 @@
   "author": "cesine",
   "license": "ISC",
   "devDependencies": {
-    "nightwatch": "^0.9.12"
+    "nightwatch": "git://github.com/cesine/nightwatch#feature/support_suites_in_modules"
   },
   "dependencies": {
     "config": "^1.25.1",
