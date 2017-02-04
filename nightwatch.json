@@ -6,6 +6,9 @@
   ],
   "test_workers" : true,
   "output_folder"  : "reports",
+  "live_output": false,
+  "output": true,
+  "silent": true,
 
   "selenium" : {
     "start_process" : true,
