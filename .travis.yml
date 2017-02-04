@@ -4,20 +4,8 @@ node_js:
 
 env:
   global:
-    secure: NX3V4sshYgUhIFRax/ISYBvx8382Mt2u8ztpvM1QGh8UJuUlrFi4w5nsbTQ7DmQnHtmrLYYBopprOqWtxjEs/9bwEdO1lCZiPtfYVrXWYtfKqJD6NEEBv4epkHHxGgThD+DP/Sea6G5RgSpDcrBByuKu9lXsxpYfZT+TiiJMcTv/dQSn5ZHq51ULlgaRLAy0cqqTqL7KA2nd0R4yxLECKx4xbkxH4u2BatCiviTSr41J1vk/pKRI1m49bRHWCaGLyuP4lGx0TlW/QZdiUEg51ABzyH2CKxz0yYcfTsOhb6ANilEPQfHAIJb2JnUcGwsxImDdlR6T9wDxIbDbLWQBEZ2wsN6L/eaAdDaXMuvh7oqmyPXedy0oZ4f0HdXBGL4vWGJeeoF2lFvCr5hisPVUhLcWXsTqVdeudE3TVMQtO/lqV1l/feB09QZBK5RPQvMVCN7HncNCU4EmAzihA5E+TsE86MpeEereTTgJBao619Dl0BGZzu91/feIbQaJoaRiWhO0OzH/aMP2a/oY2qdOWWHWiCT67mpT20LXoSewqBMICpOw762IRBwO5911Ahf9BW3fG0Q/EDkXXw57GtYK4dlzI3h6Cs9CQsMng37osowwU9iHhRr+jSQHf33f58WON8L/sgn+WrQBEaNKrLx7zSZvSScTFYiJlwrZrkDXnN8=
-
-addons:
-  sauce_connect:
-    username: "cesine"
-    access_key: os.environ["SAUCE_ACCESS_KEY"]
-
-  # $ travis lint
-  #   Warnings for .travis.yml:
-  #   [x] in addons.sauce_connect section: unexpected key capabilities, dropping
-  #   capabilities:
-  #       tunnel-identifier: os.environ["TRAVIS_JOB_NUMBER"]
-  #       build: os.environ["TRAVIS_BUILD_NUMBER"]
-  #       tags: os.environ["TRAVIS_PYTHON_VERSION"], "CI"
+  - secure: NX3V4sshYgUhIFRax/ISYBvx8382Mt2u8ztpvM1QGh8UJuUlrFi4w5nsbTQ7DmQnHtmrLYYBopprOqWtxjEs/9bwEdO1lCZiPtfYVrXWYtfKqJD6NEEBv4epkHHxGgThD+DP/Sea6G5RgSpDcrBByuKu9lXsxpYfZT+TiiJMcTv/dQSn5ZHq51ULlgaRLAy0cqqTqL7KA2nd0R4yxLECKx4xbkxH4u2BatCiviTSr41J1vk/pKRI1m49bRHWCaGLyuP4lGx0TlW/QZdiUEg51ABzyH2CKxz0yYcfTsOhb6ANilEPQfHAIJb2JnUcGwsxImDdlR6T9wDxIbDbLWQBEZ2wsN6L/eaAdDaXMuvh7oqmyPXedy0oZ4f0HdXBGL4vWGJeeoF2lFvCr5hisPVUhLcWXsTqVdeudE3TVMQtO/lqV1l/feB09QZBK5RPQvMVCN7HncNCU4EmAzihA5E+TsE86MpeEereTTgJBao619Dl0BGZzu91/feIbQaJoaRiWhO0OzH/aMP2a/oY2qdOWWHWiCT67mpT20LXoSewqBMICpOw762IRBwO5911Ahf9BW3fG0Q/EDkXXw57GtYK4dlzI3h6Cs9CQsMng37osowwU9iHhRr+jSQHf33f58WON8L/sgn+WrQBEaNKrLx7zSZvSScTFYiJlwrZrkDXnN8=
+  - secure: TSKo+q40AsX4d1C5AbHESOzglqr16TRLWSIACdKsUFprzRf5WBib7XebkVnNI9d3clxxplDlu6lmq1FelcCRZ5PZotiu86YKzYpwHbZbPsYQhB+UY82AEQZMl8LFYtAXP0/4fPv4s/TRm69DaEsgfC5a/aMMkYfNEUsGHHXrZMj88cH48AsI8jEAS2sG7Ek/dz47u9ONPTUwG7Slpu7LpSxZ6+Ya7f2gXXKw+nqlK2Bbl0MXcFskGrIX5bVOuCP+2izxpHQALbBAJu/NT9U5xLsyDLnfIRT/hynE+b8qvwRE35rFqLsCOnk0wxB8gwmUcIuPangt5yL58a41ktqxpY5qwzID2QmR3jMR/yYzRUsSrRtTEATMjo7fdx7QTQ9Fi+itpaRonii9J9XkEI/4bT3f2zKIqwdvfZqssWq20XNLJDgj3YwQnS3AQ/L+QZsi/8ZF+/0/sW5F/60IhhSWFm2/RWGwesa8jskpsHIXGNB114yiPa9wfdiMZCKZBSYOxdcbk927x7ucd6towlc5CHyzahTkgyd8YtOUpamt5nOY7kljNZPscW2ewUaDQ6jFqY0M7DfZRetgQOmr+EOl2x4sU8eFk2HaKMwZ9nx4mOXgdjOi5qMloLg8N+1/LDjkHVz4ufqzLwbzBG5sTF1SM5RByi91ZsnYNr0xY9xQrPc=
 
 script:
   npm run test:saucelabs
