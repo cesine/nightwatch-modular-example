@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch -c nightwatch.json",
+    "test:saucelabs": "nightwatch -c nightwatch.json --env saucelabs",
     "selenium:download": "curl http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar > selenium-server-standalone.jar"
   },
   "author": "",

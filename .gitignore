@@ -3,4 +3,5 @@ selenium-debug.log
 *.jar
 tests_output
 reports
+screenshots
 npm-debug.log

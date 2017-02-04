@@ -27,7 +27,7 @@
       "screenshots" : {
         "enabled" : false,
         "on_failure" : true,
-        "path" : ""
+        "path" : "screenshots"
       },
       "desiredCapabilities": {
         "name" : "test-example",

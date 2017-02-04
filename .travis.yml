@@ -1,17 +1,23 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
 
-# addons:
-#   sauce_connect:
-#     username: "cesine"
-#   jwt:
-#     secure: "The secure string output by `travis encrypt SAUCE_ACCESS_KEY=Your Sauce Labs access key`"
-#     username = os.environ["SAUCE_USERNAME"]
-#     access_key = os.environ["SAUCE_ACCESS_KEY"]
-#     capabilities["tunnel-identifier"] = os.environ["TRAVIS_JOB_NUMBER"]
-#     hub_url = "%s:%s@localhost:4445" % (username, access_key)
-#     driver = webdriver.Remote(desired_capabilities=capabilities, command_executor="http://%s/wd/hub" % hub_url)
-#
-#     capabilities["build"] = os.environ["TRAVIS_BUILD_NUMBER"]
-#     capabilities["tags"] = [os.environ["TRAVIS_PYTHON_VERSION"], "CI"]
+env:
+  global:
+    secure: NX3V4sshYgUhIFRax/ISYBvx8382Mt2u8ztpvM1QGh8UJuUlrFi4w5nsbTQ7DmQnHtmrLYYBopprOqWtxjEs/9bwEdO1lCZiPtfYVrXWYtfKqJD6NEEBv4epkHHxGgThD+DP/Sea6G5RgSpDcrBByuKu9lXsxpYfZT+TiiJMcTv/dQSn5ZHq51ULlgaRLAy0cqqTqL7KA2nd0R4yxLECKx4xbkxH4u2BatCiviTSr41J1vk/pKRI1m49bRHWCaGLyuP4lGx0TlW/QZdiUEg51ABzyH2CKxz0yYcfTsOhb6ANilEPQfHAIJb2JnUcGwsxImDdlR6T9wDxIbDbLWQBEZ2wsN6L/eaAdDaXMuvh7oqmyPXedy0oZ4f0HdXBGL4vWGJeeoF2lFvCr5hisPVUhLcWXsTqVdeudE3TVMQtO/lqV1l/feB09QZBK5RPQvMVCN7HncNCU4EmAzihA5E+TsE86MpeEereTTgJBao619Dl0BGZzu91/feIbQaJoaRiWhO0OzH/aMP2a/oY2qdOWWHWiCT67mpT20LXoSewqBMICpOw762IRBwO5911Ahf9BW3fG0Q/EDkXXw57GtYK4dlzI3h6Cs9CQsMng37osowwU9iHhRr+jSQHf33f58WON8L/sgn+WrQBEaNKrLx7zSZvSScTFYiJlwrZrkDXnN8=
+
+addons:
+  sauce_connect:
+    username: "cesine"
+    access_key: os.environ["SAUCE_ACCESS_KEY"]
+
+  # $ travis lint
+  #   Warnings for .travis.yml:
+  #   [x] in addons.sauce_connect section: unexpected key capabilities, dropping
+  #   capabilities:
+  #       tunnel-identifier: os.environ["TRAVIS_JOB_NUMBER"]
+  #       build: os.environ["TRAVIS_BUILD_NUMBER"]
+  #       tags: os.environ["TRAVIS_PYTHON_VERSION"], "CI"
+
+script:
+  npm run test:saucelabs
