@@ -1,14 +1,14 @@
 {
   "src_folders" : [
-    "./test",
     "./node_modules/nightwatch-component-a/test",
+    "./test",
     "./node_modules/nightwatch-component-b/test"
   ],
   "test_workers" : true,
   "output_folder"  : "reports",
   "live_output": false,
   "output": true,
-  "silent": true,
+  "silent": false,
 
   "selenium" : {
     "start_process" : true,
